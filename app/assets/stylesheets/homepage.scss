@@ -1,0 +1,150 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$bgblue: #003399;
+$color_hover: #cc3333;
+header{
+    height: 80px;
+    background-color: $bgblue !important;
+}
+.nav_ele{
+    color: white !important;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.nav_ele:hover{
+    background-color: $color_hover !important;
+    color: white !important;
+    // border-radius: 4px;
+    border: none;
+    font-weight: 600;
+}
+header{
+    padding-left: 8%;
+    padding-right: 10%;
+}
+.background{
+    margin-right: 0px;
+    padding-right: 0px;
+    background: url(2.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 800px;
+}
+
+.new_user{
+    label, em{
+        color: $bgblue;
+        margin-top: 10px;
+    }
+    
+    .actions {
+        input{
+            background-color: $bgblue;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 50px;
+        }
+        input:hover{
+            background-color: $color_hover;
+        }
+    }
+    
+    input{
+        height: 40px;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        width: 50%;
+    }
+    #user_remember_me{
+        width: 5% !important;
+        height: 25px;
+    }
+    
+}
+h2{
+    color: $bgblue;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 12px;
+    margin-top: 14px;
+    height: 50px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 13px;
+    background-color:$color_hover;
+    // border-radius: 4px;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 14px;
+    z-index: 1;
+    top: 50px;
+    left: 0px;
+    font-weight: normal;
+       
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            width: 100%;
+            // padding: 5px 20px 5px 5px;
+            margin-bottom: 5px;
+
+        }
+  }
+  
+  .dropdown:hover {
+    .dropdown-content{
+        display: block;
+        a:hover{
+            color: $bgblue !important;
+        }
+    }
+  }
+img{
+    text-align: left;
+    float: left;
+    margin-right: 40px;
+    margin-top: 8px;
+}
+.footer{
+    font-size: 10px;
+    color: $color_hover;
+    line-height: 1em;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #cccccc;
+        .col-6{
+            width: 50%;
+        }
+        .col{
+            float: left;
+            padding: 10px;
+            text-align: center;
+        }
+}
+.footer:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.user_icon{
+    margin-top: 10px;
+    padding: 15px;
+}
