@@ -1,0 +1,39 @@
+<header class="navbar-top navbar-inverse nav_style" >
+    <a href="/"><img src="DHA1.png" alt="icon" style="width: 80px; height: 64px;" ></a>
+    <ul class="nav navbar-nav redirect">
+        <li><%= link_to "Trang chủ", '/' , class: "nav_ele" %></li>
+        <li><%= link_to "Từ điển", dict_path, class: "nav_ele" %></li>
+        
+        <li class="dropdown nav_ele">
+            Bài học
+            <div class="dropdown-content">
+            <% if user_signed_in? %>
+            <%= link_to "Bảng chữ cái",alphabet_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc báo",news_path, class: "dropdown-item" %></br>
+            <%= link_to "Học qua bài hát",songs_path, class: "dropdown-item" %></br>
+            <% else %>
+            <%= link_to "Bảng chữ cái", new_user_session_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc báo", new_user_session_path , class: "dropdown-item" %></br>
+            <%= link_to "Học qua bài hát",new_user_session_path, class: "dropdown-item" %></br>
+            <% end %>
+            </div>
+        </li>
+        
+        <li><%= link_to "Phương pháp học", '#', class: "nav_ele" %></li>
+    </ul>
+
+
+    <ul class="nav navbar-nav navbar-right log-in">
+        <% if user_signed_in? %>
+        <li class="nav_ele user_icon"><i class="fas fa-user"></i>
+        <%= current_user.name %></li>
+        <li style="color: white; margin-top: 30px">|</li>
+        <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete , class: "nav_ele" %></li>
+        <% else %>
+        <li><%= link_to "Đăng nhập", new_user_session_path , class: "nav_ele" %></li>
+        <li style="color: white; margin-top: 30px">|</li>
+        <li class="form"><%= link_to "Đăng kí", new_user_registration_path, class: "nav_ele" %></li>
+        <% end %>
+    </ul>
+  
+</header>
