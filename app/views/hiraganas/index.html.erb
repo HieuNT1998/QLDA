@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<h1>HIRAGANA</h1>
+<%= link_to 'New Hiragana', new_hiragana_path %>
+<div class="container card_index">
+  <div class="row">
+    <% @hiraganas.each do |hiragana| %>
+      <%= render 'card', hiragana: hiragana  %>
+    <% end %>
+  </div>
+</div>
+
