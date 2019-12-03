@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_24_154223) do
+ActiveRecord::Schema.define(version: 2019_11_28_081328) do
 
   create_table "hiraganas", force: :cascade do |t|
     t.string "cachviet"
     t.string "cachdoc"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "question"
+    t.string "answer_a"
+    t.string "answer_b"
+    t.string "answer_c"
+    t.string "answer_d"
+    t.string "correct_answer"
+    t.integer "hiragana_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hiragana_id"], name: "index_tests_on_hiragana_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +47,5 @@ ActiveRecord::Schema.define(version: 2019_11_24_154223) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "tests", "hiraganas"
 end
