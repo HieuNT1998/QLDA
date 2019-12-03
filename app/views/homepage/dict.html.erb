@@ -1,1 +1,39 @@
-<h3>Đây là phần để tra từ nè!!</h3>
+
+<input id="search-word" name="word" type="text" placeholder="JAPANESE / ENGLISH / ROMAJI" autofocus>
+<button type="button" class="btn btn-primary" id="button" ><i class="fas fa-search"></i></button>
+<div class="mean-content">
+<h3 class="search-word"></h3>
+<table id="mean">
+    
+</table>
+</div>
+
+
+<script>
+$("#button").on("click", myFunction);
+function myFunction(){
+    var value1= $("#search-word").val();
+    var value = `https://jisho.org/api/v1/search/words?keyword=${value1}`;
+    console.log(value);
+    $(".search-word").text(value1);
+    $("#mean").html("");
+    fetch(value)
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+      var len = data.data.length;
+    for(var j=0; j<len; j++){
+        $("#mean").append(`<tr>
+            <td id="kanji">${data.data[j].japanese[0].word}</td>
+            <td>${data.data[j].japanese[0].reading}</td>
+            <td>${data.data[j].senses[0].english_definitions}</td>
+        </tr></hr>`)
+    }
+  })
+} 
+
+</script>
+
+
+
