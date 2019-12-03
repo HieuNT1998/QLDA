@@ -1,0 +1,27 @@
+// Place all the styles related to the hiraganas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1{
+    text-align: center;
+}
+
+.card_index{
+    margin-left: 100px ;
+}
+
+.card{
+    background-color: rgb(240, 196, 196);
+    text-align: center;
+    margin:10px 0px 10px 10px ;
+
+}
+
+.card .cach_viet{
+    height: 180px;
+    font-size: 100px ;
+}
+
+.card .cach_doc{
+    font-size: 30px;
+}
