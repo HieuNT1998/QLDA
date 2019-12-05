@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.4'
 gem 'devise'
-
+gem 'carrierwave', '~> 2.0', '>= 2.0.2'
 #bootstrap
 
 gem 'bootstrap-sass', '~>3.4.1'

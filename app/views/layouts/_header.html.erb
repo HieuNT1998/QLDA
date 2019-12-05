@@ -18,8 +18,21 @@
             <% end %>
             </div>
         </li>
+
+       
         
-        <li><%= link_to "Phương pháp học", '#', class: "nav_ele" %></li>
+        <li class="dropdown nav_ele">
+            Phương pháp học
+            <div class="dropdown-content">
+            <% if user_signed_in? %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",posts_path, class: "dropdown-item" %></br>
+            <% else %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",posts_path, class: "dropdown-item" %></br>
+            <% end %>
+        </div>
+    </li>
     </ul>
 
 
