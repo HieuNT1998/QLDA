@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$bgblue: #003399;
+$color_hover: #cc3333;
+
+#dict_title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: $color_hover;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+#search-word{
+    height: 40px;
+    padding: 5px 15px;
+    width: 55%;
+    margin-left: 20%;
+    margin-right: 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border:1px solid $bgblue;
+    font-size: 15px;
+}
+
+.mean-content{
+    font-size: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: $bgblue;
+    h3{
+        font-size: 25px;
+        color: $color_hover;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    table{
+        margin: 10px;
+        margin-left: 5%;
+        margin-bottom: 30px;
+        #kanji{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        td{
+            width: 20%;
+            font-weight: normal;
+            vertical-align: center;
+            height: 50px;
+        } 
+        tr{
+            margin-top: 10px;
+            border-bottom: solid 1px $color_hover;
+        }
+    }
+
+}

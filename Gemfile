@@ -3,7 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
 gem 'devise'
+<<<<<<< HEAD
 gem 'carrierwave', '~> 2.0', '>= 2.0.2'
+=======
+gem 'rack-cors', :require => 'rack/cors'
+>>>>>>> 20240309c90f55ae91d37591bb6d81e8733c4cd9
 #bootstrap
 
 gem 'bootstrap-sass', '~>3.4.1'
