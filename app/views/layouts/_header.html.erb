@@ -1,11 +1,12 @@
-<header class="navbar-top navbar-inverse nav_style" >
+
+<header class="navbar navbar-expand-lg" >
     <a href="/"><img src="DHA1.png" alt="icon" style="width: 80px; height: 64px;" ></a>
-    <ul class="nav navbar-nav redirect">
-        <li><%= link_to "Trang chủ", '/' , class: "nav_ele" %></li>
-        <li><%= link_to "Từ điển", dict_path, class: "nav_ele" %></li>
+    <ul class="navbar-nav redirect">
+        <li class="nav_ele nav-link"><i class="fas fa-home"></i><%= link_to "Trang chủ", '/' %></li>
+        <li class="nav_ele nav-link"><i class="fas fa-language"></i><%= link_to "Từ điển", dict_path %></li>
         
-        <li class="dropdown nav_ele">
-            Bài học
+        <li class="dropdown nav_ele nav-item">
+        <i class="fas fa-book-reader"></i></i>Bài học
             <div class="dropdown-content">
             <% if user_signed_in? %>
             <%= link_to "Bảng chữ cái","hiraganas", class: "dropdown-item" %> </br>
@@ -19,20 +20,20 @@
             </div>
         </li>
         
-        <li><%= link_to "Phương pháp học", '#', class: "nav_ele" %></li>
+        <li class="nav_ele nav-link"><i class="fas fa-graduation-cap"></i><%= link_to "Phương pháp học", '#' %></li>
     </ul>
 
 
-    <ul class="nav navbar-nav navbar-right log-in">
+    <ul class="navbar-nav navbar-right log-in">
         <% if user_signed_in? %>
-        <li class="nav_ele user_icon"><i class="fas fa-user"></i>
-        <%= current_user.name %></li>
-        <li style="color: white; margin-top: 30px">|</li>
-        <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete , class: "nav_ele" %></li>
+        <li class="nav_ele nav-link user_icon"><i class="fas fa-user"></i>
+        <%= link_to current_user.name, infor_path  %></li>
+        <li style="color: white; margin-top: 12px">|</li>
+        <li class="nav_ele nav-link" ><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %></li>
         <% else %>
-        <li><%= link_to "Đăng nhập", new_user_session_path , class: "nav_ele" %></li>
-        <li style="color: white; margin-top: 30px">|</li>
-        <li class="form"><%= link_to "Đăng kí", new_user_registration_path, class: "nav_ele" %></li>
+        <li class="nav_ele nav-link"><%= link_to "Đăng nhập", new_user_session_path %></li>
+        <li style="color: white; margin-top: 15px">|</li>
+        <li class="form nav_ele nav-link"><%= link_to "Đăng ký", new_user_registration_path %></li>
         <% end %>
     </ul>
   
