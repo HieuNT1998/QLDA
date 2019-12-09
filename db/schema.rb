@@ -10,24 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_12_03_084530) do
-
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "comment"
-=======
-ActiveRecord::Schema.define(version: 2019_11_28_081328) do
 
   create_table "hiraganas", force: :cascade do |t|
     t.string "cachviet"
     t.string "cachdoc"
->>>>>>> 20240309c90f55ae91d37591bb6d81e8733c4cd9
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
   create_table "post_comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
@@ -41,7 +32,8 @@ ActiveRecord::Schema.define(version: 2019_11_28_081328) do
     t.string "post"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-=======
+  end
+
   create_table "tests", force: :cascade do |t|
     t.string "question"
     t.string "answer_a"
@@ -53,7 +45,6 @@ ActiveRecord::Schema.define(version: 2019_11_28_081328) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["hiragana_id"], name: "index_tests_on_hiragana_id"
->>>>>>> 20240309c90f55ae91d37591bb6d81e8733c4cd9
   end
 
   create_table "users", force: :cascade do |t|

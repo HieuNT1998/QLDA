@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
 
   resources :post_comments
   resources :posts
-=======
   resources :hiraganas do
     resources :tests
   end
->>>>>>> 20240309c90f55ae91d37591bb6d81e8733c4cd9
   devise_for :users
   resources :tests
 
