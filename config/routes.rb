@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :articles
+
+
+  
+  resources :post_comments
+  resources :posts
+
   resources :hiraganas do
     resources :tests
   end
