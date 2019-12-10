@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :tests
   end
   devise_for :users
+  resources :users
   resources :tests
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   get 'alphabet' => 'homepage#alphabet'
   get 'news' => 'homepage#news'
   get 'songs' => 'homepage#songs'
+  get 'infor' => 'users#show'
 end
