@@ -96,8 +96,8 @@ header{
 .background{
     margin-right: 0px;
     padding-right: 0px;
-    background: url(2.png) no-repeat;
-    background-size: 100% 100%;
+    background: url(cat4.gif) 800px 50px no-repeat, url(cat1.1.gif) 60px 400px no-repeat, url(cat1.gif) 1000px 980px no-repeat, url(cat1.1.gif) 60px 1560px no-repeat,url(2.png) left top repeat ;
+    background-size: 200px 200px, auto, auto, auto, 100% auto;
     position: relative;
     min-height: 810px;
 }
@@ -199,7 +199,7 @@ a:hover{
 }
 
 .log-in{
-    margin-left: 20% !important;
+    margin-right: 5% !important;
     height: 50px;
 }
 
