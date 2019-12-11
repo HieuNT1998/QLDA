@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-
-  
   resources :set_cards do
     resources :flask_cards
   end

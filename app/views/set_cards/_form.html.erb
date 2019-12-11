@@ -11,13 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.text_field :title %>
+  <div class="field form-group">
+    <label for=""> Tên bộ thẻ: </label>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary"%>
   </div>
-
 <% end %>
+
 
