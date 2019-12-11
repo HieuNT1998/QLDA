@@ -4,9 +4,7 @@
         <%= set_card.title %>
     </span>
     <div class="trash_icon">
-        <%= link_to set_card, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="fas fa-trash-alt fa-2x"></i>
-        <% end %>
+        <%= link_to 'xóa', method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
 </div>
