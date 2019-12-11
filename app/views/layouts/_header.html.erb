@@ -18,8 +18,20 @@
             <%= link_to "Flask card",new_user_session_path, class: "dropdown-item" %></br>
             <% end %>
             </div>
-        </li>
-        <li class="nav_ele nav-link"><i class="fas fa-graduation-cap"></i><%= link_to "Phương pháp học", posts_path %></li>
+        </li> 
+        <li class="nav_ele nav-link"><i class="fas fa-graduation-cap"></i><%= link_to "Phương pháp học", '#' %></li>
+        <li class="dropdown nav_ele">
+            Phương pháp học
+            <div class="dropdown-content">
+            <% if user_signed_in? %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",posts_path, class: "dropdown-item" %></br>
+            <% else %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",posts_path, class: "dropdown-item" %></br>
+            <% end %>
+        </div>
+    </li>
     </ul>
 
     <ul class="navbar-nav ml-md-auto log-in">
