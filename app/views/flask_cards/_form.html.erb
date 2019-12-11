@@ -1,17 +1,16 @@
 <%= form_with(model: [ @set_card, @set_card.flask_cards.build ], local: true) do |form| %>
-  <p>
-    <label for=""> kanji </label>
-    <%= form.text_field :cach_viet %>
-  </p>
-  <p>
-    <label for=""> hiragana </label>
-    <%= form.text_area :cach_doc %>
-  </p>
-  <p>
-    <label for=""> nghia </label>
-    <%= form.text_area :nghia %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="form-group">
+    <label for=""> Kanji: </label>
+    <%= form.text_area :cach_viet, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for=""> hiragana: </label>
+    <%= form.text_area :cach_doc, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for=""> Nghĩa: </label>
+    <%= form.text_area :nghia, class: "form-control" %>
+  </div>
+  <%= form.submit ,class: "btn btn-primary"%>
+  
 <% end %>
