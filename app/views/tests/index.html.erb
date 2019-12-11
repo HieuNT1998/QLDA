@@ -1,12 +1,13 @@
-<div class="container">
-  
-  <div class="test_container">
+<div class="container-fluid">
+  <h2>Kiểm tra bảng chữ cái</h2>
+  <div class="test_container container">
     <div id="myCarousel" class="carousel slide Card" data-ride="carousel">
     
       <div class="test carousel-inner" role="listbox">
         <% @tests.each do |t| %>
           <%= render 'testcard', t: t%>
         <% end %>
+        <p class="back-button"><i class="fas fa-backward"></i><%= link_to "Back", :back %></p>
       </div>
       
       <div class="prev" href="#myCarousel" role="button" data-slide="prev" >
@@ -16,8 +17,8 @@
       <div class="next" href="#myCarousel" role="button" data-slide="next">
         <img src="https://img.icons8.com/nolan/96/000000/double-right.png">
       </div>
-    
     </div>
+    
   <div>
 </div>
 
